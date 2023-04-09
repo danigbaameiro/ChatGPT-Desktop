@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline';"
+    />
+    <style>
+      #webview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-flex !important;
+    }
+    </style>
+  </head>
+  <body>
+    <webview
+      id="webview"
+      autosize="on"
+      src="https://chat.openai.com/chat"
+    ></webview>
+  </body>
+</html>

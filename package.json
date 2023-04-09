@@ -1,0 +1,45 @@
+{
+  "name": "chatgpt-desktop",
+  "version": "1.0.0",
+  "description": "Do you love ChatGPT? Do you want to have it more at hand? Then nothing better than your own desktop application!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Daniel García Baameiro",
+  "license": "MIT",
+  "build": {
+    "appId": "com.invented.chatgpt",
+    "productName": "ChatGPT_Desktop",
+    "artifactName": "${productName}.AppImage",
+    "files": [
+      "main.js",
+      "index.html",
+      "assets/css/main.css"
+    ],
+    "extraResources": [
+      "assets"
+    ],
+    "icon": "assets/icons/icon.ico",
+    "directories": {
+      "buildResources": "resources"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icons/icon.icns"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": ["AppImage", "dir"],
+      "icon": "assets/icons/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^22.10.3",
+    "electron": "^22.0.0"
+  }
+}
