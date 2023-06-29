@@ -67,6 +67,24 @@ After that, you can search for the application.
   <img src="assets/img/chatgpt_gnome.png" alt="Electron GNOME" style="border-radius: 5px">
 </div>
 
+## Possible errors
+If you see the following error in Ubuntu 22.04:
+```sh
+dlopen(): error loading libfuse.so.2
+
+AppImages require FUSE to run. 
+You might still be able to extract the contents of this AppImage 
+if you run it with the --appimage-extract option. 
+See https://github.com/AppImage/AppImageKit/wiki/FUSE 
+for more information
+```
+
+Run the following command:
+```sh
+sudo apt install libfuse2
+```
+
+
 ## How to use it
 
 To launch the application, find "ChatGPT Desktop" in your installed applications and click on its icon. The application will open and you will be able to interact with ChatGPT as you would in the web version. Another option is to execute the command `electron <path_to_repository>`.
